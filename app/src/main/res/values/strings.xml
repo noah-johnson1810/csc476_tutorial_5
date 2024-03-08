@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Team 5 - Prospect</string>
+    <string name="startGameButtonText">Start</string>
+    <string name="dot_capture_select_button_text">Dot</string>
+    <string name="line_capture_select_button_text">Line</string>
+    <string name="rectangle_capture_select_button_text">Rectangle</string>
+    <string name="current_player_text_default">Current Player:</string>
+    <string name="player1GameDefaultText">"Player 1"</string>
+    <string name="player2GameTextDefault">Player 2</string>
+    <string name="currentPlayerTurnNameDefaultText">player1Name\'s Turn</string>
+    <string name="defaultPlayer2NameText">player2Name</string>
+    <string name="defaultPlayer1NameText">player1Name</string>
+    <string name="player1ScoreDefault">0</string>
+    <string name="player2ScoreDefaultText">0</string>
+    <string name="name2hint">Player 2\'s Name</string>
+    <string name="name1hint">Player 1\'s Name</string>
+    <string name="roundAmountPrompt">How many rounds?</string>
+    <string name="howToPlay">How To Play</string>
+    <string name="gameRules">The goal of Prospect is to own more mines than your opponent at the
+        end of the game.\n\n\nPlayers will take turns choosing a capture mode from Dot mode, Line mode,
+        and Rectangle mode, before making a selection on the game board.  Be sure to use two fingers
+        when using a Line mode or Rectangle mode capture!  Each capture mode
+        can capture more mines than the last, but the chance of a successful capture goes down
+        as well, with a Dot capture being guaranteed, a Line capture having a 75\% success rate,
+        and a Rectangle capture having a 10-50\% capture rate depending on the size of the
+        rectangle.\n\n\nOnce each player has performed a capture,
+        the next round will begin.  The length of the game is decided before play, and can be
+        chosen in 5 round increments from 5 to 50.  Once the players complete the final round,
+        the winner is decided as the player with the most mines owned.
+    </string>
+    <string name="titleContentDesc">The Game\'s Title, Prospect</string>
+    <string name="play_again">Play Again</string>
+    <string name="placeholderplayername">PlaceholderPlayerName</string>
+    <string name="you_win">You Win</string>
+    <string-array name="roundSelectorOptions">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>35</item>
+        <item>40</item>
+        <item>45</item>
+        <item>50</item>
+    </string-array>
+</resources>

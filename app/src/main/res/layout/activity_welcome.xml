@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WelcomeActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/player1Name"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:hint="@string/name1hint"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textColorHint="#413D42"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/player2Name"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:ems="10"
+            android:hint="@string/name2hint"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textColorHint="#413D42"
+            app:layout_constraintEnd_toEndOf="@+id/player1Name"
+            app:layout_constraintStart_toStartOf="@+id/player1Name"
+            app:layout_constraintTop_toBottomOf="@+id/player1Name" />
+
+        <TextView
+            android:id="@+id/howManyRounds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/roundAmountPrompt"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/player2Name"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/player2Name" />
+
+        <Button
+            android:id="@+id/startGameButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:onClick="onStartCaptureSelectActivity"
+            android:text="@string/startGameButtonText"
+            app:layout_constraintEnd_toEndOf="@+id/player2Name"
+            app:layout_constraintStart_toStartOf="@+id/player2Name"
+            app:layout_constraintTop_toBottomOf="@+id/howManyRounds" />
+
+        <Spinner
+            android:id="@+id/roundSelector"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginStart="24dp"
+            android:entries="@array/roundSelectorOptions"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/howManyRounds"
+            app:layout_constraintTop_toBottomOf="@+id/player2Name" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:onClick="onGameHelp"
+            android:text="@string/howToPlay"
+            app:layout_constraintEnd_toEndOf="@+id/startGameButton"
+            app:layout_constraintStart_toStartOf="@+id/startGameButton"
+            app:layout_constraintTop_toBottomOf="@+id/startGameButton" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:contentDescription="@string/titleContentDesc"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/prospect" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

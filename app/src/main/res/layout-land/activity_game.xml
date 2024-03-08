@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5">
+
+
+        <TextView
+            android:id="@+id/player1GameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:background="#B7002AFF"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            android:text="@string/player1GameDefaultText"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/player2GameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:background="#B3FF0000"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            android:text="@string/player2GameTextDefault"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/player1NameGameView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/defaultPlayer1NameText"
+            app:layout_constraintEnd_toEndOf="@+id/player1GameText"
+            app:layout_constraintHorizontal_bias="0.454"
+            app:layout_constraintStart_toStartOf="@+id/player1GameText"
+            app:layout_constraintTop_toBottomOf="@+id/player1GameText" />
+
+        <TextView
+            android:id="@+id/player2NameGameView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/defaultPlayer2NameText"
+            app:layout_constraintEnd_toEndOf="@+id/player2GameText"
+            app:layout_constraintStart_toStartOf="@+id/player2GameText"
+            app:layout_constraintTop_toBottomOf="@+id/player2GameText" />
+
+        <TextView
+            android:id="@+id/player1ScoreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/player1ScoreDefault"
+            android:textColor="#002AFF"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="@+id/player1GameText"
+            app:layout_constraintStart_toStartOf="@+id/player1GameText"
+            app:layout_constraintTop_toBottomOf="@+id/player1NameGameView" />
+
+        <TextView
+            android:id="@+id/player2ScoreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/player2ScoreDefaultText"
+            android:textColor="#FF0000"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="@+id/player2GameText"
+            app:layout_constraintStart_toStartOf="@+id/player2GameText"
+            app:layout_constraintTop_toBottomOf="@+id/player2NameGameView" />
+
+        <TextView
+            android:id="@+id/currentPlayerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/currentPlayerTurnNameDefaultText"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/player2ScoreText"
+            app:layout_constraintStart_toEndOf="@+id/player1ScoreText"
+            app:layout_constraintTop_toBottomOf="@+id/player1ScoreText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <edu.sdsmt.team5.risk.GameArea
+        android:id="@+id/gameArea"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:background="@drawable/green_border" />
+
+</LinearLayout>
